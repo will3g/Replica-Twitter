@@ -1,0 +1,120 @@
+/* ------------------------------------------------- */
+/* ---------------------- Banner ------------------- */
+
+div.banner {
+  height: 380px;
+  width: 100%;
+  background: #3bb9e3;
+
+  /* Com os comandos abaixo, centralizamos todos os elementos do banner */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Cor fonte do banner */
+  color: #fff;
+}
+
+/* ------------------------------------------------- */
+/* ----------------- Footer Banner ----------------- */
+
+div.bar {
+  height: 59px; /* Atura do footer */
+  background: #FFF; /* Background footer */
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .25);
+  /* box-shadow: [horizontal] [vertical] [blur] rgba(0, 0, 0, .25); */
+}
+
+div.bar .content {
+  /* Herda atríbutos da classe content */
+
+  display: flex; /* É do tipo flex */
+  justify-content: space-between; /* Espaço entre os elementos horizontalmente*/
+  align-items: center; /* Espaço entre os elementos verticalmente */
+  padding-left: 285px; /* Espaço interno da div */
+  height: 100%; /* Responsável pela utilização de todo espaço vertical do footer banner */
+}
+
+div.bar .content .actions {
+  display: flex;
+}
+
+div.bar .content ul {
+  /* Herda atríbutos da classe content e seleciona a ul*/
+
+  display: flex; /* Do tipo flex */
+  list-style: none; /* Sem estilização da lista (pontinho) */
+  height: 100%;
+}
+
+div.bar .content ul li {
+  /* Herda atríbutos da classe content e seleciona a li da lista ul*/
+
+  display: flex; /* Do tipo flex */
+  flex-direction: column; /* Alinhamento em coluna */
+  justify-content: center; /* Centraliza os itens verticalmente */
+  align-items: center; /* Centralização dos itens, gerando uma centralização horizontal */
+  padding: 0 15px; /* Espaço horizontal */
+ 
+  position: relative;
+}
+
+div.bar .content ul li span { 
+  /* De Tweets, Followings, Followers, Favorites, Lists, Moments */
+  color: #667580; /* Cor dos atríbutos do usuário */
+  font-size: 12px; /* Fonte dos atríbutos do usuário */
+  font-weight: bold; /* Estilização da fonte dos atríbutos do usuário */
+}
+
+div.bar .content ul li strong {
+  /* De Tweets, Followings, Followers, Favorites, Lists, Moments */
+  color: #667580; /* Cor dos atríbutos do usuário */
+  font-size: 18px; /* Fonte dos atríbutos do usuário */
+  font-weight: bold; /* Estilização da fonte dos atríbutos do usuário */
+  margin-top: 2px; /* Margem */
+}
+
+div.bar .content ul li.active::after {
+  content: "";
+  /* O content é obrigatório quando utilizamos "::after", 
+          porém não é obrigatório passar um valor */
+
+  width: 100%; /* Utiliza 100% da largura */
+  height: 2px; /* Altura de 2px */
+  position: absolute; /* Posição para sobrepor a barrinha azul abaixo de Tweets */
+  bottom: 0; /* Posição */
+  left: 0; /* Posição */
+  background: #3bb9e3; /* Cor */
+
+}
+
+div.bar .content ul li.active strong {
+  color: #3bb9e3; /* Ativado por padrão */
+}
+
+div.bar .content .actions button {
+  height: 34px; /* Altura do botão Follow */
+  background: #FFF;  /* Cor botão Follow */
+
+  display: flex;  /* O botão Follow é do tipo flex */
+  align-items: center;  /* Alinhamento de itens centralizados (Verticalmente)*/
+  justify-content: center;   /* Alinhamento de itens cetralizados (Horizontalmente) */
+
+  width: 90px;  /* Largura do botão Follow */
+  font-weight: bold;  /* Negrito na fonte */
+  font-size: 14px;  /* Tamanho fonte */
+  color: #3bb9e3;  /* Cor da fonte *
+
+  border: 0;  /* Sem borda padrão */
+  border-radius: 16px;  /* Raio na borda de 16px */
+  border: 1px solid #3bb9e3; /* Adiciona borda no botão Follow */
+
+  margin-right: 20px; /* Espaço lateral do botão Follow e do botão More */
+}
+
+div.bar .content .actions button:hover { /* Quando passar o mouse */
+  background-color: #3bb9e3; 
+  color: #FFF;
+  border: 1px solid #FFF;
+}

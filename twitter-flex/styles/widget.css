@@ -1,0 +1,135 @@
+/* ------------------------------------------------- */
+/* -------------------- Widgets -------------------- */
+
+/*/-/- BIO -/-/*/
+
+div.wrapper-content { /* Container é do tipo flex */
+  display: flex;
+}
+
+div.wrapper-content aside.profile { 
+  width: 260px; /* Largura do Profile (ou BIO) */
+}
+
+div.wrapper-content aside.profile img.avatar {
+  width: 210px; /* Tamanho imagem avatar largura */
+  height: 210px; /* Tamanho imagem avatar altura */
+  border-radius: 50%; /* Raio da borda imagem avatar */
+  border: 6px solid #FFF; /* Borda imagem avatar */
+  margin-top: -140px; /* Coloca pra cima */
+}
+
+div.wrapper-content aside.profile h1 {
+  font-size: 21px; /* Tamanho da fonte */
+  color: #1f2226; /* Atribuí cor na fonte */
+  margin-top: 10px; /* Atribuí margem */
+}
+
+div.wrapper-content aside.profile span {
+  font-size: 14px; /* Tamanho da fonte */
+  color: #53626c; /* Atribuí cor na fonte */
+  margin-top: 10px; /* Atribuí margem */
+}
+
+div.wrapper-content aside.profile p {
+  font-size: 14px; /* Tamanho da fonte */
+  color: #1f2226; /* Atribuí cor na fonte */
+  margin-top: 15px; /* Atribuí margem */
+}
+
+div.wrapper-content aside.profile ul {
+  margin-top: 20px; /* Atribuí margem */
+  list-style: none; /* Tira o estilo default da lista */
+} 
+
+div.wrapper-content aside.profile ul.list-bio li {
+  font-size: 14px; /* Tamanho da fonte */
+  color: #657786; /* Atribuí cor na fonte */
+  
+  display: flex; /* li é um container tipo flex */
+  align-items: center; /* Alinha os itens no centro */
+  margin-top: 5px; /* Margem de topo em cada li da bio */
+}
+
+div.wrapper-content aside.profile ul.list-bio li:first-child { /* No primeiro filho... */
+  margin-top: 0; /* Margem de topo da primeira li da bio é 0 */
+}
+
+div.wrapper-content aside.profile ul.list-bio li img {
+  margin-right: 10px; /* Margem de 10px a direita de cada imagem na bio */
+}
+
+/*/-/- FOLLOWERS -/-/*/
+
+div.wrapper-content aside.profile .widget {
+  margin-top: 20px;
+}
+
+div.wrapper-content aside.profile .widget strong {
+  font-weight: normal;
+  color: #3bb9e3;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+div.wrapper-content aside.profile .widget strong img {
+  margin-right: 5px;
+}
+
+div.wrapper-content aside.profile .followers ul {
+  
+  list-style: none;
+  
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  
+  flex-direction: row;
+  justify-content: row;
+
+  align-items: flex-start;
+  align-content: flex-start;
+  
+}
+
+div.wrapper-content aside.profile .followers ul li {
+  width: 48px;
+  height: 48px;
+  background: #D0D5D9;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin: 0 5px 10px 0;
+  
+}
+
+
+/*/-/- IMAGES AND VIDEOS -/-/*/
+
+div.wrapper-content aside.profile .images ul {
+  
+  list-style: none;
+  
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  
+  flex-direction: row;
+  justify-content: row;
+
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+div.wrapper-content aside.profile .images ul li {
+  width: 80px;
+  height: 80px;
+  background: #D0D5D9;
+  border-radius: 10%;
+  margin: 0 5px 5px 0;
+
+/*
+    flex: <flex-grow> <flex-shrink> auto;
+*/  flex: 1 0 auto;
+ 
+}

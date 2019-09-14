@@ -1,0 +1,37 @@
+/* ----------------------------------------------- */
+/* ---------------------- Main ------------------- */
+
+* { 
+  /* Aqui estamos praticamente dando um reset nos compotens, 
+          tirando todo o espaço entre os componentes em tela   */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+body {
+
+  /* Cor de fundo */
+  background: #e6ecf0;
+
+  /* Fontes que podem ser utilizadas na aplicação */
+  font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+
+  /* Abaixo setamos a renderização do texto para optimizeLegibility 
+  sendo !important. Ficará mais agradável a visualização dos textos. */
+  text-rendering: optimizeLegibility !important; 
+
+  /* O -webkit- pode ser encontrado em Chrome, Firefox, Opera */
+  /* -webkit-font-smoothing serve para sombrear o texto */
+  -webkit-font-smoothing: antialiased !important;
+}
+
+input, button {
+  outline: 0; /* Faz com que tire o comportamento padrão */
+}
+
+.content {
+  max-width: 1170px; /* Max de largura */
+  margin: 0 auto; /* Margem vertical 0 e margem horizontal auto */
+  padding: 0 30px; /* Espaço interno vertical 0 e horizontal 30px */
+}

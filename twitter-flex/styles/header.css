@@ -1,0 +1,108 @@
+/* ------------------------------------------------- */
+/* ---------------------- Header ------------------- */
+
+header#main-header {
+  height: 46px; /* Altura do header */
+  background: #fff; /* cor de fundo do header */
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .25); /* Sombra do header */
+
+  /* Com os comandos abaixo, fazemos o header sobrepor o banner */
+  position: relative;
+  z-index: 1;
+}
+
+header#main-header .content{
+  display: flex; /* container do tipo flex */
+  align-items: center; /* Centraliza ao meio */
+  justify-content: space-between; /* Espaço entre os elementos */
+  height: 100%; /* Faz os elementos do header ocupar toda a altura do mesmo */
+}
+
+/* -------------------------------------------------------------------------- */
+/* ul do lado esquerdo, onde possui os ícones: Home, Messages e Notifications */
+header#main-header nav ul {
+  display: flex;    /* o container é do tipo flex */
+  list-style: none; /* tira aquele pontinho da lista */
+}
+
+header#main-header nav ul li {
+  display: flex;  /* Em "nav ul li" setamos o tipo flex */
+  align-items: center;   /* Alinha os itens no centro */
+
+  font-size: 13px;  /* Tamanho fonte do header */
+  color: #667580;  /* Cor fonte header */
+  font-weight: bold; /* Negrito na fonte */
+
+  margin-left: 30px; /* Margem a esquerda de 30px */
+}
+
+header#main-header nav ul li:first-child {
+  margin: 0;  /* Margem do ultimo componente messages é zero */
+}
+
+header#main-header nav ul li img {
+  margin-right: 7px;  /* Margem em volta dos icones Home, Notifications e Menssages */
+}
+
+/* -------------------------------------------------------------------------- */
+/* Lado direito do header onde possuí os ícones: Procurar, Avatar e Tweet */
+header#main-header div.side { 
+  display: flex; /* A classe side (div) é do tipo flex*/
+}
+
+header#main-header div.side img {
+  height: 34px; /* Tamanho da imagem avatar */
+  width: 35px; /* Tamanho da imagem avatar */
+  border-radius: 50%; /* Borda da imagem avatar */
+  margin: 0 15px; /* Espaço ao redor do avatar */
+}
+
+header#main-header div.side button {
+  height: 34px; /* Altura do botão Tweet */
+  background: #3bb9e3;  /* Cor botão Tweet */
+
+  display: flex;  /* O botão Tweet é do tipo flex */
+  align-items: center;  /* Alinhamento de itens centralizados (Verticalmente)*/
+  justify-content: center;   /* Alinhamento de itens cetralizados (Horizontalmente) */
+
+  width: 90px;  /* Largura do botão Tweet */
+  font-weight: bold;  /* Negrito na fonte */
+  font-size: 14px;  /* Tamanho fonte */
+  color: #fff;  /* Cor da fonte */
+
+  border: 0;  /* Sem borda padrão */
+  border-radius: 16px;  /* Raio na borda de 16px */
+}
+
+header#main-header div.side button:hover {
+  background: #FFF;
+  color: #3bb9e3;
+  border: 1px solid #3bb9e3;
+}
+
+header#main-header div.side input {
+  width: 220px; /* Largura da "caixa" input */
+  height: 34px; /* Altura da "caixa" input */
+  
+  border-radius: 16px; /* Raio do input */
+  border: 1px solid #E6ECF0; /* Borda do input */
+  
+  padding: 0 35px 0 12px; /* Espaçamento interno */
+  /* padding: [horiz] [vert]; */
+  /* padding: [cima] [direita] [embaixo] [esquerda]; */
+
+  font-size: 12px; /* Tamanho fonte */
+
+  color: #667581; /* Cor da fonte */
+  
+  /* Abaixo selecionamos a imagem da lupa para colocar no input */
+  background: #F9F5FA url('/images/search.svg') no-repeat 190px center;
+  /* background: #F9F5FA;  Cor de fundo do input "Procurar" */
+  /* [ no-repeat ] serve para a imagem não repetir 
+     [ 190px ] posição que queremos horizontalmente
+     [ center; ] é a posição que queremos verticalmente*/
+}
+
+header#main-header div.side input:hover {
+  box-shadow: 2px 2px 1px #3bb9e3;
+}
